@@ -8,20 +8,20 @@ class BowlingTest extends TestCase
 {
     private $game;
 
-    public function rollMany($pins, $rolls): void
+    private function rollMany($pins, $rolls): void
     {
         foreach (range(1, $rolls) as $i) {
             $this->game->roll($pins);
         }
     }
 
-    public function rollSpare(): void
+    private function rollSpare(): void
     {
         $this->game->roll(5);
         $this->game->roll(5);
     }
 
-    public function rollStrike(): void
+    private function rollStrike(): void
     {
         $this->game->roll(10);
     }
